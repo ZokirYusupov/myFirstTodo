@@ -1,0 +1,284 @@
+#particles-js{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    z-index: -2;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: #0cbaba;
+    background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+    
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:100vh;
+    justify-content: center;
+}
+.inputBox{
+    position: relative;
+    width: 30%;
+    height: 2.5rem;
+    border: 0.030rem solid #555;
+    border-radius: 4px;
+    overflow: hidden;
+    
+}
+@media screen and (max-width:700px) {
+    .inputBox{
+        width: 50%;
+    }
+    .container>.inputControl{
+        width: 57%;
+        height: 40px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        display: flex;
+        /* overflow: hidden; */
+        /* overflow-x: auto; */
+        background: rgb(255, 255, 255);
+        padding: 5px;
+        border-radius: 3px;
+        
+    }
+}
+input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+}
+input:focus{
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .8);
+    color: #000;
+  
+}
+.inputControl{
+    width: 50%;
+}
+
+::placeholder{
+    padding: 0 10px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: #444;
+}
+.btn{
+    position: absolute;
+    /* width: 100%; */
+    height: 100%;
+    right: 0;
+    padding: 0 15px;
+    cursor: pointer;
+    border: none;
+    border-left: 1px solid #555;
+    background-color: transparent;
+    /* border: 0.030rem solid red; */
+}
+.btn:hover{
+    background-color: royalblue;
+    background-color:rgba(0, 0, 0, .7);
+    transition: .6s ease-in-out;
+}
+.btn:hover > .la-plus{
+    transform: rotate(90deg);
+    transition: .6s ease-in-out;
+    color: cornsilk;
+}
+.la-plus{
+    font-size: 1.3rem;
+    color: black;
+    z-index: 34;
+    font-weight: bold;
+}
+.list-head{
+    margin-top: 40px;
+
+}
+li{
+    width: 300px;
+    height: 40px;
+    border: 0.030rem solid #555;
+    border-radius: 4px;
+    padding-left: 10px;
+    list-style-type: none;
+    margin: 20px;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    
+}
+li.active{
+    transform: rotatey(50deg);
+    transition: 2s;
+}
+/* .libtn{
+   padding: 10px 20px;
+   outline: none;
+   border: none;
+   cursor: pointer;
+   position: absolute;
+   right: 0;
+   top: 0;
+   height: 100%;
+} */
+.la-trash{
+    font-size: 1.4rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px;  
+    height: 100%;
+}
+.la-trash:hover{
+    background-color: rgb(223, 83, 83);
+    color: rgb(231, 207, 207);
+    transition: .5s;
+}
+
+
+
+
+.inputControl{
+    width: 20%;
+    height: 40px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    display: flex;
+    overflow: hidden;
+    /* overflow-x: auto; */
+    background: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 3px;
+    /* flex-wrap: wrap; */
+}
+.controlbtn{
+    padding: 10px 15px;
+    cursor: pointer;
+    outline:none;
+    border: none;
+    border-radius: 3px;
+}
+.controlbtn:not(:first-child){
+    margin-left: 16px;
+}
+.controlbtn:nth-child(1) {
+    background-color: #0cbaba;
+    background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+}
+
+.controlbtn:nth-child(2) {
+    background-color: #6b0f1a;
+    background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
+
+}
+
+.controlbtn:nth-child(3) {
+    background-color: #63d471;
+    background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+
+}
+
+.controlbtn:nth-child(4) {
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+}
+
+.controlbtn:nth-child(5) {
+    background-color: #3bb78f;
+    background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+}
+
+.controlbtn:nth-child(6) {
+    background-color: #42378f;
+    background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+}
+
+
+
+/* icon */
+.boxx{
+    position: relative;
+    margin: 15px 0;
+}
+.input{
+    width: 40px;
+    height: 40px;
+    background: none;
+    border-radius: 50px;
+    border: 4px solid #fff;
+    box-sizing: border-box;
+    outline: none;
+    transition: width .4s ease-in-out, border-radius .8s ease-in-out, padding .2s;
+    transition-delay: .4s;
+    color: white;
+    font-size: 20px;
+}
+.input:focus{
+    color: white;
+}
+.inc{
+    width: 360px;
+    border-radius: 0;
+    padding: 0 15px;
+    padding-right: 40px;
+    /* position: relative; */
+}
+.btnt{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.btnt::before{
+    content: "";
+    width: 4px;
+    height: 20px;
+    background: white;
+    position: absolute;
+    transform: rotate(-45deg);
+    bottom: 5px;
+    right: -1px;
+    transition: .3s ;
+}
+.close::before, .close::after{
+    content: "";
+    width: 4px;
+    height: 34px;
+    background: white;
+    position: absolute;
+    bottom: 25px;
+    right: 18px;
+}
+.close::before{
+    transform: rotate(-45deg);
+}
+.close::after{
+    transform: rotate(45deg);
+}
+/* icon */
